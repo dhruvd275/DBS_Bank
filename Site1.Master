@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication12.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Travel Agency</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/media.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          // Hide all answers initially
+          $(".faq-answer").hide();
+
+          // Toggle visibility of answers on click
+          $(".faq-question").click(function() {
+            $(this).next(".faq-answer").slideToggle();
+          });
+        });
+      </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header -->
+        <navbar>
+            <a href="/"><img src="./assets/images/logo.png" alt="" width="70px" height="auto"></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#location">Locations</a></li>
+                <li><a href="Packages.aspx">Packages</a></li>
+                <li><a href="about.aspx">About Us</a></li>
+                <li><a href="contact.aspx">Contact Us</a></li>
+            </ul>
+                        <div class="toggle-icon">
+               <input type="checkbox" name="" id="">
+               <i class="fa-solid fa-bars"></i>
+            </div> 
+        </navbar>
+        <!-- Header -->
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    
+        <!-- footer -->
+        <footer>
+            <div class="Footer">
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul class="quickLinks-ul">
+                        <li><a href=""> Register </a></li>
+                        <li><a href="about.aspx"> About Us </a></li>
+                        <li><a href="contact.aspx"> Contact Us </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Connect</h3>
+                    <ul class="social-ul">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-wordpress-simple"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Copyright">
+                <p>Copyright © 2022 FirstFlight Travels All Right Reserved.</p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" integrity="sha512-xgIrH5DRuEOcZK5cPtVXx/WSp5DTir2JNcKE5ahV2u51NCTD9UDxbQgZHYHVBlPc4H8tug6BZTYIl2RdA/X0Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- footer -->
+    </form>
+</body>
+</html>
